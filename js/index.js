@@ -28,3 +28,17 @@ for(const image of images){
         image.setAttribute('src','images/categories/watch.png');
     })
 }
+
+const submitButton = document.getElementById('submit-button');
+const submitField = document.getElementById('submit-field');
+console.log(submitField);
+
+submitField.addEventListener('keyup',(e) =>{
+    //console.log(e.target.value);
+    if(e.target.value ==='email'){
+        submitButton.disabled = false;
+    }
+    else{
+        submitButton.disabled = true;
+    }
+})
